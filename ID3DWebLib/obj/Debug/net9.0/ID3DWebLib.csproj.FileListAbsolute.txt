@@ -1,0 +1,15 @@
+C:\Git\ID3D\ID3DWebLib\bin\Debug\net9.0\ID3DWebLib.deps.json
+C:\Git\ID3D\ID3DWebLib\bin\Debug\net9.0\ID3DWebLib.runtimeconfig.json
+C:\Git\ID3D\ID3DWebLib\bin\Debug\net9.0\ID3DWebLib.dll
+C:\Git\ID3D\ID3DWebLib\bin\Debug\net9.0\ID3DWebLib.pdb
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ID3DWebLib.csproj.AssemblyReference.cache
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ID3DWebLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ID3DWebLib.AssemblyInfoInputs.cache
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ID3DWebLib.AssemblyInfo.cs
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ID3DWebLib.csproj.CoreCompileInputs.cache
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ID3DWebLib.sourcelink.json
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ID3DWebLib.dll
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\refint\ID3DWebLib.dll
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ID3DWebLib.pdb
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ID3DWebLib.genruntimeconfig.cache
+C:\Git\ID3D\ID3DWebLib\obj\Debug\net9.0\ref\ID3DWebLib.dll

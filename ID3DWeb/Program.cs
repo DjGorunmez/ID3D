@@ -1,5 +1,13 @@
 var builder = WebApplication.CreateBuilder(args);
 
+// Adds session services with optional configuration
+builder.Services.AddSession(options =>
+{
+	options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
+	options.Cookie.HttpOnly = true;                 // Security best practice
+	options.Cookie.IsEssential = true;              // Required for GDPR compliance
+});
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -15,6 +23,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

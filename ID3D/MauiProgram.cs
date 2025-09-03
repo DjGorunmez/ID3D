@@ -42,8 +42,8 @@ namespace ID3D
             builder.Services.AddSingleton<ProjectListPageModel>();
             builder.Services.AddSingleton<ManageMetaPageModel>();
 
-            builder.Services.AddTransientWithShellRoute<ProjectDetailPage, ProjectDetailPageModel>("project");
-            builder.Services.AddTransientWithShellRoute<TaskDetailPage, TaskDetailPageModel>("task");
+            //builder.Services.AddTransientWithShellRoute<ProjectDetailPage, ProjectDetailPageModel>("project");
+            //builder.Services.AddTransientWithShellRoute<TaskDetailPage, TaskDetailPageModel>("task");
 
             return builder.Build();
         }
