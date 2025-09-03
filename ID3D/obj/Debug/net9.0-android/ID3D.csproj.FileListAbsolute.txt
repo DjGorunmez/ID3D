@@ -985,3 +985,7 @@ C:\Git\ID3D\ID3D\obj\Debug\net9.0-android\ID3D.sourcelink.json
 C:\Git\ID3D\ID3D\obj\Debug\net9.0-android\ID3D.csproj.Up2Date
 C:\Git\ID3D\ID3D\obj\Debug\net9.0-android\android\assets\x86_64\ID3DApp.dll
 C:\Git\ID3D\ID3D\obj\Debug\net9.0-android\android\assets\x86_64\ID3DApp.pdb
+C:\Git\ID3D\ID3D\bin\Debug\net9.0-android\ID3DModel.dll
+C:\Git\ID3D\ID3D\bin\Debug\net9.0-android\ID3DModel.pdb
+C:\Git\ID3D\ID3D\obj\Debug\net9.0-android\android\assets\x86_64\ID3DModel.dll
+C:\Git\ID3D\ID3D\obj\Debug\net9.0-android\android\assets\x86_64\ID3DModel.pdb

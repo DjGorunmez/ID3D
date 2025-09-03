@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID3DApp", "ID3DApp\ID3DApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID3DWeb", "ID3DWeb\ID3DWeb.csproj", "{3E99DD21-9AD9-481F-ACD0-9AE71E540622}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID3DModel", "ID3DModel\ID3DModel.csproj", "{87A2657C-F8F0-4F46-BFDF-EEA45C4D170D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID3DWebLib", "ID3DWebLib\ID3DWebLib.csproj", "{66EEC3E0-F81B-46CC-876D-99A4FB9531D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{3E99DD21-9AD9-481F-ACD0-9AE71E540622}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E99DD21-9AD9-481F-ACD0-9AE71E540622}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E99DD21-9AD9-481F-ACD0-9AE71E540622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A2657C-F8F0-4F46-BFDF-EEA45C4D170D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A2657C-F8F0-4F46-BFDF-EEA45C4D170D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A2657C-F8F0-4F46-BFDF-EEA45C4D170D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A2657C-F8F0-4F46-BFDF-EEA45C4D170D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66EEC3E0-F81B-46CC-876D-99A4FB9531D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66EEC3E0-F81B-46CC-876D-99A4FB9531D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66EEC3E0-F81B-46CC-876D-99A4FB9531D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66EEC3E0-F81B-46CC-876D-99A4FB9531D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

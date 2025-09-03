@@ -1,0 +1,421 @@
+﻿USE [master]
+GO
+/****** Object:  Database [ID3D]    Script Date: 3-9-2025 20:17:52 ******/
+CREATE DATABASE [ID3D]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'ID3D', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\ID3D.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'ID3D_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\ID3D_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+ALTER DATABASE [ID3D] SET COMPATIBILITY_LEVEL = 160
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [ID3D].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [ID3D] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [ID3D] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [ID3D] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [ID3D] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [ID3D] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [ID3D] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [ID3D] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [ID3D] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [ID3D] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [ID3D] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [ID3D] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [ID3D] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [ID3D] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [ID3D] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [ID3D] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [ID3D] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [ID3D] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [ID3D] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [ID3D] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [ID3D] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [ID3D] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [ID3D] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [ID3D] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [ID3D] SET  MULTI_USER 
+GO
+ALTER DATABASE [ID3D] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [ID3D] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [ID3D] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [ID3D] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [ID3D] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [ID3D] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+ALTER DATABASE [ID3D] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [ID3D] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+GO
+USE [ID3D]
+GO
+/****** Object:  Table [dbo].[Address]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Address](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Street] [nvarchar](150) NOT NULL,
+	[Number] [nvarchar](50) NOT NULL,
+	[Zipcode] [nchar](10) NOT NULL,
+	[City] [nvarchar](150) NOT NULL,
+	[Country] [nvarchar](150) NOT NULL,
+	[CreationDate] [datetime] NOT NULL,
+	[Enabled] [bit] NOT NULL,
+ CONSTRAINT [PK_Address] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Company]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Company](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[IdProject] [int] NOT NULL,
+	[IdAddress] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](150) NOT NULL,
+	[Description] [nvarchar](150) NULL,
+	[CreationDate] [datetime] NOT NULL,
+	[Enabled] [bit] NOT NULL,
+	[CompanyId] [nvarchar](150) NOT NULL,
+	[Employees] [int] NOT NULL,
+ CONSTRAINT [PK_Company] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[House]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[House](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[IdAddress] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](150) NOT NULL,
+	[Description] [nvarchar](150) NULL,
+	[CreationDate] [datetime] NOT NULL,
+	[Enabled] [bit] NOT NULL,
+	[NumberOfLiving] [int] NOT NULL,
+	[BuildingCreated] [datetime] NOT NULL,
+	[Parcel] [int] NOT NULL,
+	[LivableParcel] [int] NOT NULL,
+	[Rooms] [int] NOT NULL,
+	[Extra] [nvarchar](500) NULL,
+	[Price] [decimal](18, 18) NOT NULL,
+	[Type] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_House] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[NWO]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[NWO](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[IdStatus] [int] NOT NULL,
+	[IdSchool] [int] NULL,
+	[IdProject] [int] NULL,
+	[IdHome] [int] NOT NULL,
+	[HomeAssignDate] [datetime] NOT NULL,
+	[Graduated] [bit] NOT NULL,
+	[Diploma] [nvarchar](150) NULL,
+ CONSTRAINT [PK_NWO] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Packages]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Packages](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Text] [nvarchar](50) NOT NULL,
+	[Description] [nvarchar](max) NOT NULL,
+	[Enabled] [bit] NOT NULL,
+	[CreationDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_Packages] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Profiles]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Profiles](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[IdPackage] [int] NULL,
+	[IdWallet] [int] NULL,
+	[IdNWO] [int] NULL,
+	[Enabled] [bit] NOT NULL,
+	[Username] [nvarchar](350) NULL,
+	[Password] [nvarchar](350) NULL,
+	[LoginCount] [int] NULL,
+	[LastLoginDate] [datetime] NULL,
+	[IP] [nvarchar](150) NULL,
+	[CreationDate] [datetime] NOT NULL,
+	[ExpireDate] [datetime] NOT NULL,
+	[MaxDevices] [int] NULL,
+	[ImageUrl] [nvarchar](max) NULL,
+	[VideoUrl] [nvarchar](max) NULL,
+	[Synced] [bit] NULL,
+	[Verified] [bit] NOT NULL,
+	[VerifiedDate] [datetime] NULL,
+	[FullName] [nvarchar](150) NOT NULL,
+	[Email] [nvarchar](150) NOT NULL,
+ CONSTRAINT [PK_Profiles] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Project]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Project](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[IdAddress] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](150) NOT NULL,
+	[Description] [nvarchar](150) NOT NULL,
+	[CreationDate] [datetime] NOT NULL,
+	[Enabled] [bit] NOT NULL,
+ CONSTRAINT [PK_Project] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[School]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[School](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[IdAddress] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](150) NOT NULL,
+	[Description] [nvarchar](150) NULL,
+	[CreationDate] [datetime] NOT NULL,
+	[Enabled] [bit] NOT NULL,
+ CONSTRAINT [PK_School] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Status]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Status](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Text] [nvarchar](50) NOT NULL,
+	[Enabled] [bit] NOT NULL,
+	[CreationDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_Status] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Wallet]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Wallet](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Amount] [decimal](18, 18) NOT NULL,
+	[UpdateDate] [datetime] NULL,
+	[CreationDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_Wallet] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[WalletLog]    Script Date: 3-9-2025 20:17:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[WalletLog](
+	[Id] [uniqueidentifier] NOT NULL,
+	[IdWallet] [int] NOT NULL,
+	[Amount] [decimal](18, 18) NOT NULL,
+	[CreationDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_WalletLog] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Address] ADD  CONSTRAINT [DF_Address_Id]  DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [dbo].[Address] ADD  CONSTRAINT [DF_Address_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[Address] ADD  CONSTRAINT [DF_Address_Enabled]  DEFAULT ((1)) FOR [Enabled]
+GO
+ALTER TABLE [dbo].[Company] ADD  CONSTRAINT [DF_Company_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[Company] ADD  CONSTRAINT [DF_Company_Enabled]  DEFAULT ((1)) FOR [Enabled]
+GO
+ALTER TABLE [dbo].[Company] ADD  CONSTRAINT [DF_Company_Employees]  DEFAULT ((1)) FOR [Employees]
+GO
+ALTER TABLE [dbo].[House] ADD  CONSTRAINT [DF_House_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[House] ADD  CONSTRAINT [DF_House_Enabled]  DEFAULT ((1)) FOR [Enabled]
+GO
+ALTER TABLE [dbo].[House] ADD  CONSTRAINT [DF_House_BuildingCreated]  DEFAULT (getdate()) FOR [BuildingCreated]
+GO
+ALTER TABLE [dbo].[NWO] ADD  CONSTRAINT [DF_NWO_IdStatus]  DEFAULT ((8)) FOR [IdStatus]
+GO
+ALTER TABLE [dbo].[Packages] ADD  CONSTRAINT [DF_Packages_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[Profiles] ADD  CONSTRAINT [DF_Profiles_Enabled]  DEFAULT ((0)) FOR [Enabled]
+GO
+ALTER TABLE [dbo].[Profiles] ADD  CONSTRAINT [DF_Profiles_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[Profiles] ADD  CONSTRAINT [DF__Profiles__MaxDev__44FF419A]  DEFAULT ((0)) FOR [MaxDevices]
+GO
+ALTER TABLE [dbo].[Profiles] ADD  CONSTRAINT [DF_Profiles_Verified]  DEFAULT ((0)) FOR [Verified]
+GO
+ALTER TABLE [dbo].[Project] ADD  CONSTRAINT [DF_Project_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[Project] ADD  CONSTRAINT [DF_Project_Enabled]  DEFAULT ((1)) FOR [Enabled]
+GO
+ALTER TABLE [dbo].[School] ADD  CONSTRAINT [DF_School_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[School] ADD  CONSTRAINT [DF_School_Enabled]  DEFAULT ((1)) FOR [Enabled]
+GO
+ALTER TABLE [dbo].[Status] ADD  CONSTRAINT [DF_Status_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[Wallet] ADD  CONSTRAINT [DF_Wallet_Amount]  DEFAULT ((0)) FOR [Amount]
+GO
+ALTER TABLE [dbo].[Wallet] ADD  CONSTRAINT [DF_Wallet_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[WalletLog] ADD  CONSTRAINT [DF_WalletLog_IdLog]  DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [dbo].[WalletLog] ADD  CONSTRAINT [DF_WalletLog_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[Company]  WITH CHECK ADD  CONSTRAINT [FK_Company_Address] FOREIGN KEY([IdAddress])
+REFERENCES [dbo].[Address] ([Id])
+GO
+ALTER TABLE [dbo].[Company] CHECK CONSTRAINT [FK_Company_Address]
+GO
+ALTER TABLE [dbo].[Company]  WITH CHECK ADD  CONSTRAINT [FK_Company_Project] FOREIGN KEY([IdProject])
+REFERENCES [dbo].[Project] ([Id])
+GO
+ALTER TABLE [dbo].[Company] CHECK CONSTRAINT [FK_Company_Project]
+GO
+ALTER TABLE [dbo].[House]  WITH CHECK ADD  CONSTRAINT [FK_House_Address] FOREIGN KEY([IdAddress])
+REFERENCES [dbo].[Address] ([Id])
+GO
+ALTER TABLE [dbo].[House] CHECK CONSTRAINT [FK_House_Address]
+GO
+ALTER TABLE [dbo].[NWO]  WITH CHECK ADD  CONSTRAINT [FK_NWO_House] FOREIGN KEY([IdHome])
+REFERENCES [dbo].[House] ([Id])
+GO
+ALTER TABLE [dbo].[NWO] CHECK CONSTRAINT [FK_NWO_House]
+GO
+ALTER TABLE [dbo].[NWO]  WITH CHECK ADD  CONSTRAINT [FK_NWO_Project] FOREIGN KEY([IdProject])
+REFERENCES [dbo].[Project] ([Id])
+GO
+ALTER TABLE [dbo].[NWO] CHECK CONSTRAINT [FK_NWO_Project]
+GO
+ALTER TABLE [dbo].[NWO]  WITH CHECK ADD  CONSTRAINT [FK_NWO_School] FOREIGN KEY([IdSchool])
+REFERENCES [dbo].[School] ([Id])
+GO
+ALTER TABLE [dbo].[NWO] CHECK CONSTRAINT [FK_NWO_School]
+GO
+ALTER TABLE [dbo].[NWO]  WITH CHECK ADD  CONSTRAINT [FK_NWO_Status] FOREIGN KEY([IdStatus])
+REFERENCES [dbo].[Status] ([Id])
+GO
+ALTER TABLE [dbo].[NWO] CHECK CONSTRAINT [FK_NWO_Status]
+GO
+ALTER TABLE [dbo].[Profiles]  WITH CHECK ADD  CONSTRAINT [FK_Profiles_NWO] FOREIGN KEY([IdNWO])
+REFERENCES [dbo].[NWO] ([Id])
+GO
+ALTER TABLE [dbo].[Profiles] CHECK CONSTRAINT [FK_Profiles_NWO]
+GO
+ALTER TABLE [dbo].[Profiles]  WITH CHECK ADD  CONSTRAINT [FK_Profiles_Packages] FOREIGN KEY([IdPackage])
+REFERENCES [dbo].[Packages] ([Id])
+GO
+ALTER TABLE [dbo].[Profiles] CHECK CONSTRAINT [FK_Profiles_Packages]
+GO
+ALTER TABLE [dbo].[Profiles]  WITH CHECK ADD  CONSTRAINT [FK_Profiles_Wallet] FOREIGN KEY([IdWallet])
+REFERENCES [dbo].[Wallet] ([Id])
+GO
+ALTER TABLE [dbo].[Profiles] CHECK CONSTRAINT [FK_Profiles_Wallet]
+GO
+ALTER TABLE [dbo].[Project]  WITH CHECK ADD  CONSTRAINT [FK_Project_Address] FOREIGN KEY([IdAddress])
+REFERENCES [dbo].[Address] ([Id])
+GO
+ALTER TABLE [dbo].[Project] CHECK CONSTRAINT [FK_Project_Address]
+GO
+ALTER TABLE [dbo].[School]  WITH CHECK ADD  CONSTRAINT [FK_School_Address] FOREIGN KEY([IdAddress])
+REFERENCES [dbo].[Address] ([Id])
+GO
+ALTER TABLE [dbo].[School] CHECK CONSTRAINT [FK_School_Address]
+GO
+ALTER TABLE [dbo].[WalletLog]  WITH CHECK ADD  CONSTRAINT [FK_WalletLog_Wallet] FOREIGN KEY([IdWallet])
+REFERENCES [dbo].[Wallet] ([Id])
+GO
+ALTER TABLE [dbo].[WalletLog] CHECK CONSTRAINT [FK_WalletLog_Wallet]
+GO
+USE [master]
+GO
+ALTER DATABASE [ID3D] SET  READ_WRITE 
+GO

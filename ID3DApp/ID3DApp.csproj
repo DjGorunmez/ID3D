@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ID3DModel\ID3DModel.csproj" />
+  </ItemGroup>
+
 </Project>

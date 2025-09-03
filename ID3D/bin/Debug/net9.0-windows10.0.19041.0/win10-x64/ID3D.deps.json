@@ -595,8 +595,19 @@
         }
       },
       "ID3DApp/1.0.0": {
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "runtime": {
           "ID3DApp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "runtime": {
+          "ID3DModel.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -862,6 +873,11 @@
       "hashPath": "system.speech.9.0.0.nupkg.sha512"
     },
     "ID3DApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ID3DModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

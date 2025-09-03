@@ -1,0 +1,12 @@
+C:\Git\ID3D\ID3DModel\bin\Debug\net9.0\ID3DModel.deps.json
+C:\Git\ID3D\ID3DModel\bin\Debug\net9.0\ID3DModel.dll
+C:\Git\ID3D\ID3DModel\bin\Debug\net9.0\ID3DModel.pdb
+C:\Git\ID3D\ID3DModel\obj\Debug\net9.0\ID3DModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\ID3D\ID3DModel\obj\Debug\net9.0\ID3DModel.AssemblyInfoInputs.cache
+C:\Git\ID3D\ID3DModel\obj\Debug\net9.0\ID3DModel.AssemblyInfo.cs
+C:\Git\ID3D\ID3DModel\obj\Debug\net9.0\ID3DModel.csproj.CoreCompileInputs.cache
+C:\Git\ID3D\ID3DModel\obj\Debug\net9.0\ID3DModel.sourcelink.json
+C:\Git\ID3D\ID3DModel\obj\Debug\net9.0\ID3DModel.dll
+C:\Git\ID3D\ID3DModel\obj\Debug\net9.0\refint\ID3DModel.dll
+C:\Git\ID3D\ID3DModel\obj\Debug\net9.0\ID3DModel.pdb
+C:\Git\ID3D\ID3DModel\obj\Debug\net9.0\ref\ID3DModel.dll

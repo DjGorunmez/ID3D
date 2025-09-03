@@ -526,3 +526,5 @@ C:\Git\ID3D\ID3D\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifie
 C:\Git\ID3D\ID3D\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ID3DApp.dll
 C:\Git\ID3D\ID3D\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ID3DApp.pdb
 C:\Git\ID3D\ID3D\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\ID3D.sourcelink.json
+C:\Git\ID3D\ID3D\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ID3DModel.dll
+C:\Git\ID3D\ID3D\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ID3DModel.pdb

@@ -2470,11 +2470,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -4947,11 +4960,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -7424,11 +7450,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -9901,11 +9940,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -12378,11 +12430,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -14855,11 +14920,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -15405,11 +15483,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -15955,11 +16046,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -16505,11 +16609,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -17055,11 +17172,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -17605,11 +17735,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -18155,11 +18298,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -18795,11 +18951,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -19352,11 +19521,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -19909,11 +20091,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -20463,11 +20658,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -21020,11 +21228,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -21574,11 +21795,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -22490,11 +22724,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -23255,11 +23502,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -24020,11 +24280,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -24782,11 +25055,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -25547,11 +25833,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     },
@@ -26322,11 +26621,24 @@
       "ID3DApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ID3DModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ID3DApp.dll": {}
         },
         "runtime": {
           "bin/placeholder/ID3DApp.dll": {}
+        }
+      },
+      "ID3DModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DModel.dll": {}
         }
       }
     }
@@ -30665,6 +30977,11 @@
       "type": "project",
       "path": "../ID3DApp/ID3DApp.csproj",
       "msbuildProject": "../ID3DApp/ID3DApp.csproj"
+    },
+    "ID3DModel/1.0.0": {
+      "type": "project",
+      "path": "../ID3DModel/ID3DModel.csproj",
+      "msbuildProject": "../ID3DModel/ID3DModel.csproj"
     }
   },
   "projectFileDependencyGroups": {

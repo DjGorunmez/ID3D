@@ -96,3 +96,7 @@ C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\refint\ID3DWeb.dll
 C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\ID3DWeb.pdb
 C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\ID3DWeb.genruntimeconfig.cache
 C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\ref\ID3DWeb.dll
+C:\Git\ID3D\ID3DWeb\bin\Debug\net9.0\ID3DModel.dll
+C:\Git\ID3D\ID3DWeb\bin\Debug\net9.0\ID3DModel.pdb
+C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\ID3DWeb.csproj.AssemblyReference.cache
+C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\ID3DWeb.csproj.Up2Date

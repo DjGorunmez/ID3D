@@ -10,3 +10,7 @@ C:\Git\ID3D\ID3DApp\obj\Debug\net9.0\ID3DApp.dll
 C:\Git\ID3D\ID3DApp\obj\Debug\net9.0\refint\ID3DApp.dll
 C:\Git\ID3D\ID3DApp\obj\Debug\net9.0\ID3DApp.pdb
 C:\Git\ID3D\ID3DApp\obj\Debug\net9.0\ref\ID3DApp.dll
+C:\Git\ID3D\ID3DApp\bin\Debug\net9.0\ID3DModel.dll
+C:\Git\ID3D\ID3DApp\bin\Debug\net9.0\ID3DModel.pdb
+C:\Git\ID3D\ID3DApp\obj\Debug\net9.0\ID3DApp.csproj.AssemblyReference.cache
+C:\Git\ID3D\ID3DApp\obj\Debug\net9.0\ID3DApp.csproj.Up2Date
