@@ -22,7 +22,6 @@ C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\scopedcss\bundle\ID3DWeb.styles.css
 C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\scopedcss\projectbundle\ID3DWeb.bundle.scp.css
-C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\compressed\ixvx713quj-b9sayid5wm.gz
 C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\compressed\wepjbaercx-61n19gt1b8.gz
 C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\compressed\agi0msf52r-xtxxf3hu2r.gz
 C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\compressed\8il5mxzgmz-bqjiyaj88i.gz
@@ -150,3 +149,4 @@ C:\Git\ID3D\ID3DWeb\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cry
 C:\Git\ID3D\ID3DWeb\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Git\ID3D\ID3DWeb\bin\Debug\net9.0\ID3DWebLib.dll
 C:\Git\ID3D\ID3DWeb\bin\Debug\net9.0\ID3DWebLib.pdb
+C:\Git\ID3D\ID3DWeb\obj\Debug\net9.0\compressed\ixvx713quj-helouyrefl.gz
