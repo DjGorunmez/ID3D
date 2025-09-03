@@ -2466,6 +2466,16 @@
             "related": ".aar;.pdb;.xml"
           }
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-android35.0/android-arm64": {
@@ -4932,6 +4942,16 @@
           "lib/net8.0-android34.0/Xamarin.KotlinX.Serialization.Core.Jvm.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -7400,6 +7420,16 @@
             "related": ".aar;.pdb;.xml"
           }
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-android35.0/iossimulator-x64": {
@@ -9866,6 +9896,16 @@
           "lib/net8.0-android34.0/Xamarin.KotlinX.Serialization.Core.Jvm.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -12334,6 +12374,16 @@
             "related": ".aar;.pdb;.xml"
           }
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-android35.0/win10-x64": {
@@ -14801,6 +14851,16 @@
             "related": ".aar;.pdb;.xml"
           }
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-ios18.5": {
@@ -15340,6 +15400,16 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -15881,6 +15951,16 @@
             "related": ".xml"
           }
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-ios18.5/android-x64": {
@@ -16420,6 +16500,16 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -16961,6 +17051,16 @@
             "related": ".xml"
           }
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-ios18.5/maccatalyst-x64": {
@@ -17501,6 +17601,16 @@
             "related": ".xml"
           }
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-ios18.5/win10-x64": {
@@ -18040,6 +18150,16 @@
           "ref/net6.0/System.Runtime.InteropServices.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -18671,6 +18791,16 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-maccatalyst18.5/android-arm64": {
@@ -19217,6 +19347,16 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -19765,6 +19905,16 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-maccatalyst18.5/iossimulator-x64": {
@@ -20308,6 +20458,16 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -20856,6 +21016,16 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-maccatalyst18.5/win10-x64": {
@@ -21399,6 +21569,16 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -22306,6 +22486,16 @@
             "rid": "win"
           }
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-windows10.0.19041/android-arm64": {
@@ -23060,6 +23250,16 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -23816,6 +24016,16 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
+        }
       }
     },
     "net9.0-windows10.0.19041/iossimulator-x64": {
@@ -24567,6 +24777,16 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -25322,6 +25542,16 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     },
@@ -26087,6 +26317,16 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "ID3DApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ID3DApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ID3DApp.dll": {}
         }
       }
     }
@@ -30420,12 +30660,18 @@
         "xamarin.kotlinx.serialization.core.jvm.1.7.3.4.nupkg.sha512",
         "xamarin.kotlinx.serialization.core.jvm.nuspec"
       ]
+    },
+    "ID3DApp/1.0.0": {
+      "type": "project",
+      "path": "../ID3DApp/ID3DApp.csproj",
+      "msbuildProject": "../ID3DApp/ID3DApp.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0-android35.0": [
       "CommunityToolkit.Maui >= 11.1.1",
       "CommunityToolkit.Mvvm >= 8.3.2",
+      "ID3DApp >= 1.0.0",
       "Microsoft.Data.Sqlite.Core >= 8.0.8",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
@@ -30436,6 +30682,7 @@
     "net9.0-ios18.5": [
       "CommunityToolkit.Maui >= 11.1.1",
       "CommunityToolkit.Mvvm >= 8.3.2",
+      "ID3DApp >= 1.0.0",
       "Microsoft.Data.Sqlite.Core >= 8.0.8",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
@@ -30446,6 +30693,7 @@
     "net9.0-maccatalyst18.5": [
       "CommunityToolkit.Maui >= 11.1.1",
       "CommunityToolkit.Mvvm >= 8.3.2",
+      "ID3DApp >= 1.0.0",
       "Microsoft.Data.Sqlite.Core >= 8.0.8",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
@@ -30456,6 +30704,7 @@
     "net9.0-windows10.0.19041": [
       "CommunityToolkit.Maui >= 11.1.1",
       "CommunityToolkit.Mvvm >= 8.3.2",
+      "ID3DApp >= 1.0.0",
       "Microsoft.Data.Sqlite.Core >= 8.0.8",
       "Microsoft.Extensions.Logging.Debug >= 9.0.5",
       "Microsoft.Maui.Controls >= 9.0.82",
@@ -30499,19 +30748,35 @@
       "frameworks": {
         "net9.0-android35.0": {
           "targetAlias": "net9.0-android",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Git\\ID3D\\ID3DApp\\ID3DApp.csproj": {
+              "projectPath": "C:\\Git\\ID3D\\ID3DApp\\ID3DApp.csproj"
+            }
+          }
         },
         "net9.0-ios18.5": {
           "targetAlias": "net9.0-ios",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Git\\ID3D\\ID3DApp\\ID3DApp.csproj": {
+              "projectPath": "C:\\Git\\ID3D\\ID3DApp\\ID3DApp.csproj"
+            }
+          }
         },
         "net9.0-maccatalyst18.5": {
           "targetAlias": "net9.0-maccatalyst",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Git\\ID3D\\ID3DApp\\ID3DApp.csproj": {
+              "projectPath": "C:\\Git\\ID3D\\ID3DApp\\ID3DApp.csproj"
+            }
+          }
         },
         "net9.0-windows10.0.19041": {
           "targetAlias": "net9.0-windows10.0.19041.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Git\\ID3D\\ID3DApp\\ID3DApp.csproj": {
+              "projectPath": "C:\\Git\\ID3D\\ID3DApp\\ID3DApp.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

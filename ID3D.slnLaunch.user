@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ID3D\\ID3D.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ID3DWeb\\ID3DWeb.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

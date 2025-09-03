@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID3D", "ID3D\ID3D.csproj", "{4A9B6E44-02D7-49C6-8862-A2B88260D73B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID3DApp", "ID3DApp\ID3DApp.csproj", "{66AC0A5B-39ED-40E1-A5B9-53D620FE25A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID3DWeb", "ID3DWeb\ID3DWeb.csproj", "{3E99DD21-9AD9-481F-ACD0-9AE71E540622}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4A9B6E44-02D7-49C6-8862-A2B88260D73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A9B6E44-02D7-49C6-8862-A2B88260D73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A9B6E44-02D7-49C6-8862-A2B88260D73B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66AC0A5B-39ED-40E1-A5B9-53D620FE25A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66AC0A5B-39ED-40E1-A5B9-53D620FE25A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66AC0A5B-39ED-40E1-A5B9-53D620FE25A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66AC0A5B-39ED-40E1-A5B9-53D620FE25A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E99DD21-9AD9-481F-ACD0-9AE71E540622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E99DD21-9AD9-481F-ACD0-9AE71E540622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E99DD21-9AD9-481F-ACD0-9AE71E540622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E99DD21-9AD9-481F-ACD0-9AE71E540622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
