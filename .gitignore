@@ -1,0 +1,27 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ID3D/CopilotIndices/17.14.1091.29919/CodeChunks.db
+/.vs/ID3D/CopilotIndices/17.14.1091.29919/CodeChunks.db-shm
+/.vs/ID3D/CopilotIndices/17.14.1091.29919/CodeChunks.db-wal
+/.vs/ID3D/CopilotIndices/17.14.1091.29919/SemanticSymbols.db
+/.vs/ID3D/CopilotIndices/17.14.1091.29919/SemanticSymbols.db-shm
+/.vs/ID3D/CopilotIndices/17.14.1091.29919/SemanticSymbols.db-wal
+/.vs/ID3D/DesignTimeBuild/.dtbcache.v2
+/.vs/ID3D/FileContentIndex/132a76e0-dc2c-41ab-a8e0-4b6d1fa6a3b8.vsidx
+/.vs/ID3D/FileContentIndex/c8bf3e3f-7f64-417f-8bdc-8349ce3f5c59.vsidx
+/.vs/ID3D/FileContentIndex/f1867ce8-a710-42bd-8758-f7aaa98750e0.vsidx
+/.vs/ID3D/FileContentIndex/f1b209e2-2a74-4655-bcba-cc146103a3a2.vsidx
+/.vs/ID3D/v17/.futdcache.v2
+/.vs/ID3D/v17/.suo
+/.vs/ID3D/v17/.wsuo
+/.vs/ID3D/v17/DocumentLayout.backup.json
+/.vs/ID3D/v17/DocumentLayout.json
+/.vs/ID3D/v17/workspaceFileList.bin
+/.vs/ProjectEvaluation/id3d.metadata.v9.bin
+/.vs/ProjectEvaluation/id3d.projects.v9.bin
+/.vs/ProjectEvaluation/id3d.strings.v9.bin
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
