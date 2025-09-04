@@ -9,6 +9,9 @@ public class PersonalInfoSection
 {
     public string Name { get; set; }
 	public int? MaxDevices { get; set; }
+	public string Status { get; set; }
+	public string Diploma { get; set; }
+	public bool? Graduated { get; set; }
 }
 
 public class ContactInfoSection

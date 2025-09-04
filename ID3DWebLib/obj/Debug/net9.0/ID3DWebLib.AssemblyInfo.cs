@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ID3DWebLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaf86b9d1be97ea14f8c3583d4963078b685947f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2227e2c3cf889cef32b73c687e88119873d7dce4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ID3DWebLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ID3DWebLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

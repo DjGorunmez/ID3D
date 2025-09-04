@@ -4,22 +4,32 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h2>Profile</h2>
+<h2 class="text-center mb-2">Profile</h2>
 
-<div>
+<div class="card mb-2">
     <h3>Personal Info</h3>
-    <p>Name: @Model.PersonalInfo.Name</p>
-    <p>Devices: @Model.PersonalInfo.MaxDevices</p>
+    <div class="p-2">
+        <p><strong>Name:</strong> @Model.PersonalInfo.Name</p>
+        <p><strong>Devices:</strong> @Model.PersonalInfo.MaxDevices</p>
+
+        <p><strong>Graduated:</strong> @Model.PersonalInfo.Graduated</p>
+        <p><strong>Diploma:</strong> @Model.PersonalInfo.Diploma</p>
+        <p><strong>Status:</strong> @Model.PersonalInfo.Status</p>
+    </div>
 </div>
 
-<div>
+<div class="card mb-2">
     <h3>Contact Info</h3>
-    <p>Email: @Model.ContactInfo.Email</p>
-    <p>Package: @Model.ContactInfo.Package</p>
+    <div class="p-2">
+        <p><strong>Email:</strong> <a href="mailto:@Model.ContactInfo.Email">@Model.ContactInfo.Email</a></p>
+        <p><strong>Package:</strong> @Model.ContactInfo.Package</p>
+    </div>
 </div>
 
-@* <div>
+@* <div class="card mb-2">
     <h3>Preferences</h3>
-    <p>Favorite Color: @Model.Preferences.FavoriteColor</p>
-    <p>Receive Newsletter: @(Model.Preferences.ReceiveNewsletter ? "Yes" : "No")</p>
+    <div class="p-2">
+        <p><strong>Favorite Color:</strong> @Model.Preferences.FavoriteColor</p>
+        <p><strong>Receive Newsletter:</strong> @(Model.Preferences.ReceiveNewsletter ? "Yes" : "No")</p>
+    </div>
 </div> *@

@@ -28,8 +28,19 @@ namespace ID3DWeb.Controllers
 		{
 			var currentProfile = new ProfileViewModel
 			{
-				PersonalInfo = new PersonalInfoSection { Name = this.Current.FullName, MaxDevices = this.Current.MaxDevices },
-				ContactInfo = new ContactInfoSection { Email = this.Current.Email, Package = this.Current.Package?.Text },
+				PersonalInfo = new PersonalInfoSection { 
+					Name = this.Current.FullName, 
+					Graduated = this.Current.Nwo?.Graduated,
+					Diploma = this.Current.Nwo?.Diploma,
+					Status = this.Current.Nwo?.Status?.Text,
+					MaxDevices = this.Current.MaxDevices 
+				},
+
+				ContactInfo = new ContactInfoSection { 
+					Email = this.Current.Email, 
+					Package = this.Current.Package?.Text 
+				},
+
 				//Preferences = new PreferencesSection { FavoriteColor = "Blue", ReceiveNewsletter = true }
 			};
 
