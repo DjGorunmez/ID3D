@@ -17,6 +17,16 @@
 					db.SaveChanges();
 				}
 
+				if (profile.IdNwo.HasValue)
+				{
+					profile.Nwo = this.GetNwo(profile.IdNwo.Value);
+				}
+
+				if (profile.IdPackage.HasValue)
+				{
+					profile.Package = this.GetPackage(profile.IdPackage.Value);
+				}
+
 				return profile;
 			}
 		}
@@ -39,6 +49,22 @@
 			using(MyDbContext db = new MyDbContext())
 			{
 				return db.Profiles.Find(profileId);
+			}
+		}
+
+		public Package GetPackage(int packageId)
+		{
+			using(MyDbContext db = new MyDbContext())
+			{
+				return db.Packages.Find(packageId);
+			}
+		}
+
+		public Nwo GetNwo(int nwoId)
+		{
+			using(MyDbContext db = new MyDbContext())
+			{
+				return db.Nwoes.Find(nwoId);
 			}
 		}
 

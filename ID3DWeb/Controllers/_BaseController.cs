@@ -37,11 +37,6 @@ namespace ID3DWeb.Controllers
 			base.OnActionExecuting(context);
 		}
 
-		public IActionResult Index()
-		{
-			return View();
-		}
-
 		[HttpGet]
 		public IActionResult Login()
 		{
@@ -65,7 +60,7 @@ namespace ID3DWeb.Controllers
 
 				// Simulate successful login
 				ViewBag.Message = "Login successful!";
-				return View("Index");
+				return RedirectToAction("Index", "Home");
 			}
 			else
 			{

@@ -23,5 +23,17 @@ namespace ID3DWeb.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
+
+		public IActionResult Index()
+		{
+			var currentProfile = new ProfileViewModel
+			{
+				PersonalInfo = new PersonalInfoSection { Name = this.Current.FullName, MaxDevices = this.Current.MaxDevices },
+				ContactInfo = new ContactInfoSection { Email = this.Current.Email, Package = this.Current.Package?.Text },
+				//Preferences = new PreferencesSection { FavoriteColor = "Blue", ReceiveNewsletter = true }
+			};
+
+			return View(currentProfile);
+		}
 	}
 }

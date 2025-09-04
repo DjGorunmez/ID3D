@@ -1,8 +1,25 @@
-﻿@{
+﻿@model ProfileViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h2>Profile</h2>
+
+<div>
+    <h3>Personal Info</h3>
+    <p>Name: @Model.PersonalInfo.Name</p>
+    <p>Devices: @Model.PersonalInfo.MaxDevices</p>
 </div>
+
+<div>
+    <h3>Contact Info</h3>
+    <p>Email: @Model.ContactInfo.Email</p>
+    <p>Package: @Model.ContactInfo.Package</p>
+</div>
+
+@* <div>
+    <h3>Preferences</h3>
+    <p>Favorite Color: @Model.Preferences.FavoriteColor</p>
+    <p>Receive Newsletter: @(Model.Preferences.ReceiveNewsletter ? "Yes" : "No")</p>
+</div> *@

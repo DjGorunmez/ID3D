@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ID3DModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06c7a7bea4ece30fdadef3c165be48218eacc9ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaf86b9d1be97ea14f8c3583d4963078b685947f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ID3DModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ID3DModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
