@@ -34,8 +34,6 @@
             <h3>System details</h3>
             <div class="p-2">
                 <p><strong>Join date:</strong> @Model.CreationDate.ToString("dd-MM-yyyy")</p>
-                <p><strong>Wallet balance:</strong> @Model.Wallet?.Amount</p>
-                <p><strong>Package:</strong> @Model.Package?.Text</p>
             </div>
         </div>
     </div>
@@ -49,10 +47,23 @@
             </div>
         </div>
     </div>
-    <div class="col-4"></div>
-    <div class="col-4"></div>
-
-
+    <div class="col-4">
+        <div class="card mb-2">
+            <h3>Package</h3>
+            <div class="p-2">
+                <p><strong>Package:</strong> @Model.Package.Text</p>
+                <p><strong>Details:</strong> @Model.Package.Description</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card mb-2">
+            <h3>Wallet</h3>
+            <div class="p-2">
+                <p><strong>Balance:</strong> @Model.Wallet?.Amount</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 
