@@ -1,6 +1,6 @@
 ﻿USE [master]
 GO
-/****** Object:  Database [ID3D]    Script Date: 3-9-2025 20:17:52 ******/
+/****** Object:  Database [ID3D]    Script Date: 5-9-2025 12:05:45 ******/
 CREATE DATABASE [ID3D]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -82,27 +82,7 @@ ALTER DATABASE [ID3D] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLI
 GO
 USE [ID3D]
 GO
-/****** Object:  Table [dbo].[Address]    Script Date: 3-9-2025 20:17:54 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Address](
-	[Id] [uniqueidentifier] NOT NULL,
-	[Street] [nvarchar](150) NOT NULL,
-	[Number] [nvarchar](50) NOT NULL,
-	[Zipcode] [nchar](10) NOT NULL,
-	[City] [nvarchar](150) NOT NULL,
-	[Country] [nvarchar](150) NOT NULL,
-	[CreationDate] [datetime] NOT NULL,
-	[Enabled] [bit] NOT NULL,
- CONSTRAINT [PK_Address] PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Company]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[Company]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -110,7 +90,7 @@ GO
 CREATE TABLE [dbo].[Company](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[IdProject] [int] NOT NULL,
-	[IdAddress] [uniqueidentifier] NOT NULL,
+	[IdLocation] [uniqueidentifier] NOT NULL,
 	[Name] [nvarchar](150) NOT NULL,
 	[Description] [nvarchar](150) NULL,
 	[CreationDate] [datetime] NOT NULL,
@@ -123,14 +103,14 @@ CREATE TABLE [dbo].[Company](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[House]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[House]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[House](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[IdAddress] [uniqueidentifier] NOT NULL,
+	[IdLocation] [uniqueidentifier] NOT NULL,
 	[Name] [nvarchar](150) NOT NULL,
 	[Description] [nvarchar](150) NULL,
 	[CreationDate] [datetime] NOT NULL,
@@ -149,7 +129,27 @@ CREATE TABLE [dbo].[House](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NWO]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[Location]    Script Date: 5-9-2025 12:05:46 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Location](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Street] [nvarchar](150) NOT NULL,
+	[Number] [nvarchar](50) NOT NULL,
+	[Zipcode] [nchar](10) NOT NULL,
+	[City] [nvarchar](150) NOT NULL,
+	[Country] [nvarchar](150) NOT NULL,
+	[CreationDate] [datetime] NOT NULL,
+	[Enabled] [bit] NOT NULL,
+ CONSTRAINT [PK_Address] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[NWO]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -169,7 +169,7 @@ CREATE TABLE [dbo].[NWO](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Packages]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[Packages]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -186,7 +186,7 @@ CREATE TABLE [dbo].[Packages](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Profiles]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[Profiles]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -218,14 +218,14 @@ CREATE TABLE [dbo].[Profiles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Project]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[Project]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Project](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[IdAddress] [uniqueidentifier] NOT NULL,
+	[IdLocation] [uniqueidentifier] NOT NULL,
 	[Name] [nvarchar](150) NOT NULL,
 	[Description] [nvarchar](150) NOT NULL,
 	[CreationDate] [datetime] NOT NULL,
@@ -236,14 +236,14 @@ CREATE TABLE [dbo].[Project](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[School]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[School]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[School](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[IdAddress] [uniqueidentifier] NOT NULL,
+	[IdLocation] [uniqueidentifier] NOT NULL,
 	[Name] [nvarchar](150) NOT NULL,
 	[Description] [nvarchar](150) NULL,
 	[CreationDate] [datetime] NOT NULL,
@@ -254,7 +254,7 @@ CREATE TABLE [dbo].[School](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Status]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[Status]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -270,7 +270,7 @@ CREATE TABLE [dbo].[Status](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Wallet]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[Wallet]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -286,7 +286,7 @@ CREATE TABLE [dbo].[Wallet](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[WalletLog]    Script Date: 3-9-2025 20:17:54 ******/
+/****** Object:  Table [dbo].[WalletLog]    Script Date: 5-9-2025 12:05:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -302,12 +302,6 @@ CREATE TABLE [dbo].[WalletLog](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[Address] ADD  CONSTRAINT [DF_Address_Id]  DEFAULT (newid()) FOR [Id]
-GO
-ALTER TABLE [dbo].[Address] ADD  CONSTRAINT [DF_Address_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
-GO
-ALTER TABLE [dbo].[Address] ADD  CONSTRAINT [DF_Address_Enabled]  DEFAULT ((1)) FOR [Enabled]
-GO
 ALTER TABLE [dbo].[Company] ADD  CONSTRAINT [DF_Company_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
 GO
 ALTER TABLE [dbo].[Company] ADD  CONSTRAINT [DF_Company_Enabled]  DEFAULT ((1)) FOR [Enabled]
@@ -319,6 +313,12 @@ GO
 ALTER TABLE [dbo].[House] ADD  CONSTRAINT [DF_House_Enabled]  DEFAULT ((1)) FOR [Enabled]
 GO
 ALTER TABLE [dbo].[House] ADD  CONSTRAINT [DF_House_BuildingCreated]  DEFAULT (getdate()) FOR [BuildingCreated]
+GO
+ALTER TABLE [dbo].[Location] ADD  CONSTRAINT [DF_Address_Id]  DEFAULT (newid()) FOR [Id]
+GO
+ALTER TABLE [dbo].[Location] ADD  CONSTRAINT [DF_Address_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
+GO
+ALTER TABLE [dbo].[Location] ADD  CONSTRAINT [DF_Address_Enabled]  DEFAULT ((1)) FOR [Enabled]
 GO
 ALTER TABLE [dbo].[NWO] ADD  CONSTRAINT [DF_NWO_IdStatus]  DEFAULT ((8)) FOR [IdStatus]
 GO
@@ -350,8 +350,8 @@ ALTER TABLE [dbo].[WalletLog] ADD  CONSTRAINT [DF_WalletLog_IdLog]  DEFAULT (new
 GO
 ALTER TABLE [dbo].[WalletLog] ADD  CONSTRAINT [DF_WalletLog_CreationDate]  DEFAULT (getdate()) FOR [CreationDate]
 GO
-ALTER TABLE [dbo].[Company]  WITH CHECK ADD  CONSTRAINT [FK_Company_Address] FOREIGN KEY([IdAddress])
-REFERENCES [dbo].[Address] ([Id])
+ALTER TABLE [dbo].[Company]  WITH CHECK ADD  CONSTRAINT [FK_Company_Address] FOREIGN KEY([IdLocation])
+REFERENCES [dbo].[Location] ([Id])
 GO
 ALTER TABLE [dbo].[Company] CHECK CONSTRAINT [FK_Company_Address]
 GO
@@ -360,8 +360,8 @@ REFERENCES [dbo].[Project] ([Id])
 GO
 ALTER TABLE [dbo].[Company] CHECK CONSTRAINT [FK_Company_Project]
 GO
-ALTER TABLE [dbo].[House]  WITH CHECK ADD  CONSTRAINT [FK_House_Address] FOREIGN KEY([IdAddress])
-REFERENCES [dbo].[Address] ([Id])
+ALTER TABLE [dbo].[House]  WITH CHECK ADD  CONSTRAINT [FK_House_Address] FOREIGN KEY([IdLocation])
+REFERENCES [dbo].[Location] ([Id])
 GO
 ALTER TABLE [dbo].[House] CHECK CONSTRAINT [FK_House_Address]
 GO
@@ -400,13 +400,13 @@ REFERENCES [dbo].[Wallet] ([Id])
 GO
 ALTER TABLE [dbo].[Profiles] CHECK CONSTRAINT [FK_Profiles_Wallet]
 GO
-ALTER TABLE [dbo].[Project]  WITH CHECK ADD  CONSTRAINT [FK_Project_Address] FOREIGN KEY([IdAddress])
-REFERENCES [dbo].[Address] ([Id])
+ALTER TABLE [dbo].[Project]  WITH CHECK ADD  CONSTRAINT [FK_Project_Address] FOREIGN KEY([IdLocation])
+REFERENCES [dbo].[Location] ([Id])
 GO
 ALTER TABLE [dbo].[Project] CHECK CONSTRAINT [FK_Project_Address]
 GO
-ALTER TABLE [dbo].[School]  WITH CHECK ADD  CONSTRAINT [FK_School_Address] FOREIGN KEY([IdAddress])
-REFERENCES [dbo].[Address] ([Id])
+ALTER TABLE [dbo].[School]  WITH CHECK ADD  CONSTRAINT [FK_School_Address] FOREIGN KEY([IdLocation])
+REFERENCES [dbo].[Location] ([Id])
 GO
 ALTER TABLE [dbo].[School] CHECK CONSTRAINT [FK_School_Address]
 GO

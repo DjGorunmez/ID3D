@@ -27,6 +27,11 @@
 					profile.Package = this.GetPackage(profile.IdPackage.Value);
 				}
 
+				if(profile.IdWallet.HasValue)
+				{
+					profile.Wallet = this.GetWallet(profile.IdWallet.Value);
+				}
+
 				return profile;
 			}
 		}
@@ -64,7 +69,26 @@
 		{
 			using(MyDbContext db = new MyDbContext())
 			{
-				return db.Nwoes.Find(nwoId);
+				Nwo result = db.Nwoes.Find(nwoId);
+
+				result.Status = db.Status.Find(result.IdStatus);
+				result.School = db.Schools.Find(result.IdSchool);
+				result.Project = db.Projects.Find(result.IdProject);
+				result.House = db.Houses.Find(result.IdHome);
+
+				result.House.Location = db.Locations.Find(result.House.IdLocation);
+
+				//result.Company = db.Companies.FirstOrDefault(i => i.IdProject == result.IdProject);
+				
+				return result;
+			}
+		}
+
+		private Wallet GetWallet(int walletId)
+		{
+			using (MyDbContext db = new MyDbContext())
+			{
+				return db.Wallets.Find(walletId);
 			}
 		}
 

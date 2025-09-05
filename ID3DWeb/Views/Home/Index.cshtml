@@ -1,30 +1,61 @@
-﻿@model ProfileViewModel
+﻿@using ID3DWebLib
 
 @{
     ViewData["Title"] = "Home Page";
 }
+@model Profile
 
 <h2 class="text-center mb-2">Profile</h2>
 
-<div class="card mb-2">
-    <h3>Personal Info</h3>
-    <div class="p-2">
-        <p><strong>Name:</strong> @Model.PersonalInfo.Name</p>
-        <p><strong>Devices:</strong> @Model.PersonalInfo.MaxDevices</p>
+<div class="row">
+    <div class="col-4">
+        <div class="card mb-2">
+            <h3>Personal Info</h3>
+            <div class="p-2">
+                <p><strong>Name:</strong> @Model.FullName</p>
+                <p><strong>Devices:</strong> @Model.MaxDevices</p>
 
-        <p><strong>Graduated:</strong> @Model.PersonalInfo.Graduated</p>
-        <p><strong>Diploma:</strong> @Model.PersonalInfo.Diploma</p>
-        <p><strong>Status:</strong> @Model.PersonalInfo.Status</p>
+                <p><strong>Graduated:</strong> @Model.Nwo?.Graduated</p>
+                <p><strong>Diploma:</strong> @Model.Nwo?.Diploma</p>
+                <p><strong>Status:</strong> @Model.Nwo?.Status</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card mb-2">
+            <h3>Contact Info</h3>
+            <div class="p-2">
+                <p><strong>Email:</strong> <a href="mailto:@Model.Email">@Model.Email</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card mb-2">
+            <h3>System details</h3>
+            <div class="p-2">
+                <p><strong>Join date:</strong> @Model.CreationDate.ToString("dd-MM-yyyy")</p>
+                <p><strong>Wallet balance:</strong> @Model.Wallet?.Amount</p>
+                <p><strong>Package:</strong> @Model.Package?.Text</p>
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="card mb-2">
-    <h3>Contact Info</h3>
-    <div class="p-2">
-        <p><strong>Email:</strong> <a href="mailto:@Model.ContactInfo.Email">@Model.ContactInfo.Email</a></p>
-        <p><strong>Package:</strong> @Model.ContactInfo.Package</p>
+<div class="row">
+    <div class="col-4">
+        <div class="card mb-2">
+            <h3>Address</h3>
+            <div class="p-2">
+                <p><strong>Location:</strong> @Model.Nwo?.House?.Location?.Street @Model.Nwo?.House?.Location?.City</p>
+            </div>
+        </div>
     </div>
+    <div class="col-4"></div>
+    <div class="col-4"></div>
+
+
 </div>
+
+
 
 @* <div class="card mb-2">
     <h3>Preferences</h3>

@@ -37,8 +37,8 @@ namespace ID3DWebLib
 
     public interface IMyDbContext : IDisposable
     {
-        DbSet<Company> Companies { get; set; } // Company
         DbSet<House> Houses { get; set; } // House
+        DbSet<Location> Locations { get; set; } // Location
         DbSet<Nwo> Nwoes { get; set; } // NWO
         DbSet<Package> Packages { get; set; } // Packages
         DbSet<Profile> Profiles { get; set; } // Profiles
@@ -112,8 +112,8 @@ namespace ID3DWebLib
         {
         }
 
-        public DbSet<Company> Companies { get; set; } // Company
         public DbSet<House> Houses { get; set; } // House
+        public DbSet<Location> Locations { get; set; } // Location
         public DbSet<Nwo> Nwoes { get; set; } // NWO
         public DbSet<Package> Packages { get; set; } // Packages
         public DbSet<Profile> Profiles { get; set; } // Profiles
@@ -144,8 +144,8 @@ namespace ID3DWebLib
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new CompanyConfiguration());
             modelBuilder.ApplyConfiguration(new HouseConfiguration());
+            modelBuilder.ApplyConfiguration(new LocationConfiguration());
             modelBuilder.ApplyConfiguration(new NwoConfiguration());
             modelBuilder.ApplyConfiguration(new PackageConfiguration());
             modelBuilder.ApplyConfiguration(new ProfileConfiguration());
@@ -180,8 +180,8 @@ namespace ID3DWebLib
 
     public class FakeMyDbContext : IMyDbContext
     {
-        public DbSet<Company> Companies { get; set; } // Company
         public DbSet<House> Houses { get; set; } // House
+        public DbSet<Location> Locations { get; set; } // Location
         public DbSet<Nwo> Nwoes { get; set; } // NWO
         public DbSet<Package> Packages { get; set; } // Packages
         public DbSet<Profile> Profiles { get; set; } // Profiles
@@ -195,8 +195,8 @@ namespace ID3DWebLib
         {
             _database = new FakeDatabaseFacade(new MyDbContext());
 
-            Companies = new FakeDbSet<Company>("Id");
             Houses = new FakeDbSet<House>("Id");
+            Locations = new FakeDbSet<Location>("Id");
             Nwoes = new FakeDbSet<Nwo>("Id");
             Packages = new FakeDbSet<Package>("Id");
             Profiles = new FakeDbSet<Profile>("Id");
@@ -883,39 +883,11 @@ namespace ID3DWebLib
     // This is not a commercial licence, therefore only a few tables/views/stored procedures are generated.
     // ****************************************************************************************************
 
-    // Company
-    public class Company
-    {
-        public int Id { get; set; } // Id (Primary key)
-        public int IdProject { get; set; } // IdProject
-        public Guid IdAddress { get; set; } // IdAddress
-        public string Name { get; set; } // Name (length: 150)
-        public string Description { get; set; } // Description (length: 150)
-        public DateTime CreationDate { get; set; } // CreationDate
-        public bool Enabled { get; set; } // Enabled
-        public string CompanyId { get; set; } // CompanyId (length: 150)
-        public int Employees { get; set; } // Employees
-
-        // Foreign keys
-
-        /// <summary>
-        /// Parent Project pointed by [Company].([IdProject]) (FK_Company_Project)
-        /// </summary>
-        public Project Project { get; set; } // FK_Company_Project
-
-        public Company()
-        {
-            CreationDate = DateTime.Now;
-            Enabled = true;
-            Employees = 1;
-        }
-    }
-
     // House
     public class House
     {
         public int Id { get; set; } // Id (Primary key)
-        public Guid IdAddress { get; set; } // IdAddress
+        public Guid IdLocation { get; set; } // IdLocation
         public string Name { get; set; } // Name (length: 150)
         public string Description { get; set; } // Description (length: 150)
         public DateTime CreationDate { get; set; } // CreationDate
@@ -936,12 +908,59 @@ namespace ID3DWebLib
         /// </summary>
         public ICollection<Nwo> Nwoes { get; set; } // NWO.FK_NWO_House
 
+        // Foreign keys
+
+        /// <summary>
+        /// Parent Location pointed by [House].([IdLocation]) (FK_House_Address)
+        /// </summary>
+        public Location Location { get; set; } // FK_House_Address
+
         public House()
         {
             CreationDate = DateTime.Now;
             Enabled = true;
             BuildingCreated = DateTime.Now;
             Nwoes = new List<Nwo>();
+        }
+    }
+
+    // Location
+    public class Location
+    {
+        public Guid Id { get; set; } // Id (Primary key)
+        public string Street { get; set; } // Street (length: 150)
+        public string Number { get; set; } // Number (length: 50)
+        public string Zipcode { get; set; } // Zipcode (length: 10)
+        public string City { get; set; } // City (length: 150)
+        public string Country { get; set; } // Country (length: 150)
+        public DateTime CreationDate { get; set; } // CreationDate
+        public bool Enabled { get; set; } // Enabled
+
+        // Reverse navigation
+
+        /// <summary>
+        /// Child Houses where [House].[IdLocation] point to this entity (FK_House_Address)
+        /// </summary>
+        public ICollection<House> Houses { get; set; } // House.FK_House_Address
+
+        /// <summary>
+        /// Child Projects where [Project].[IdLocation] point to this entity (FK_Project_Address)
+        /// </summary>
+        public ICollection<Project> Projects { get; set; } // Project.FK_Project_Address
+
+        /// <summary>
+        /// Child Schools where [School].[IdLocation] point to this entity (FK_School_Address)
+        /// </summary>
+        public ICollection<School> Schools { get; set; } // School.FK_School_Address
+
+        public Location()
+        {
+            Id = Guid.NewGuid();
+            CreationDate = DateTime.Now;
+            Enabled = true;
+            Houses = new List<House>();
+            Projects = new List<Project>();
+            Schools = new List<School>();
         }
     }
 
@@ -1070,7 +1089,7 @@ namespace ID3DWebLib
     public class Project
     {
         public int Id { get; set; } // Id (Primary key)
-        public Guid IdAddress { get; set; } // IdAddress
+        public Guid IdLocation { get; set; } // IdLocation
         public string Name { get; set; } // Name (length: 150)
         public string Description { get; set; } // Description (length: 150)
         public DateTime CreationDate { get; set; } // CreationDate
@@ -1079,20 +1098,21 @@ namespace ID3DWebLib
         // Reverse navigation
 
         /// <summary>
-        /// Child Companies where [Company].[IdProject] point to this entity (FK_Company_Project)
-        /// </summary>
-        public ICollection<Company> Companies { get; set; } // Company.FK_Company_Project
-
-        /// <summary>
         /// Child Nwoes where [NWO].[IdProject] point to this entity (FK_NWO_Project)
         /// </summary>
         public ICollection<Nwo> Nwoes { get; set; } // NWO.FK_NWO_Project
+
+        // Foreign keys
+
+        /// <summary>
+        /// Parent Location pointed by [Project].([IdLocation]) (FK_Project_Address)
+        /// </summary>
+        public Location Location { get; set; } // FK_Project_Address
 
         public Project()
         {
             CreationDate = DateTime.Now;
             Enabled = true;
-            Companies = new List<Company>();
             Nwoes = new List<Nwo>();
         }
     }
@@ -1101,7 +1121,7 @@ namespace ID3DWebLib
     public class School
     {
         public int Id { get; set; } // Id (Primary key)
-        public Guid IdAddress { get; set; } // IdAddress
+        public Guid IdLocation { get; set; } // IdLocation
         public string Name { get; set; } // Name (length: 150)
         public string Description { get; set; } // Description (length: 150)
         public DateTime CreationDate { get; set; } // CreationDate
@@ -1113,6 +1133,13 @@ namespace ID3DWebLib
         /// Child Nwoes where [NWO].[IdSchool] point to this entity (FK_NWO_School)
         /// </summary>
         public ICollection<Nwo> Nwoes { get; set; } // NWO.FK_NWO_School
+
+        // Foreign keys
+
+        /// <summary>
+        /// Parent Location pointed by [School].([IdLocation]) (FK_School_Address)
+        /// </summary>
+        public Location Location { get; set; } // FK_School_Address
 
         public School()
         {
@@ -1204,29 +1231,6 @@ namespace ID3DWebLib
     // This is not a commercial licence, therefore only a few tables/views/stored procedures are generated.
     // ****************************************************************************************************
 
-    // Company
-    public class CompanyConfiguration : IEntityTypeConfiguration<Company>
-    {
-        public void Configure(EntityTypeBuilder<Company> builder)
-        {
-            builder.ToTable("Company", "dbo");
-            builder.HasKey(x => x.Id).HasName("PK_Company").IsClustered();
-
-            builder.Property(x => x.Id).HasColumnName(@"Id").HasColumnType("int").IsRequired().ValueGeneratedOnAdd().UseIdentityColumn();
-            builder.Property(x => x.IdProject).HasColumnName(@"IdProject").HasColumnType("int").IsRequired();
-            builder.Property(x => x.IdAddress).HasColumnName(@"IdAddress").HasColumnType("uniqueidentifier").IsRequired();
-            builder.Property(x => x.Name).HasColumnName(@"Name").HasColumnType("nvarchar(150)").IsRequired().HasMaxLength(150);
-            builder.Property(x => x.Description).HasColumnName(@"Description").HasColumnType("nvarchar(150)").IsRequired(false).HasMaxLength(150);
-            builder.Property(x => x.CreationDate).HasColumnName(@"CreationDate").HasColumnType("datetime").IsRequired();
-            builder.Property(x => x.Enabled).HasColumnName(@"Enabled").HasColumnType("bit").IsRequired();
-            builder.Property(x => x.CompanyId).HasColumnName(@"CompanyId").HasColumnType("nvarchar(150)").IsRequired().HasMaxLength(150);
-            builder.Property(x => x.Employees).HasColumnName(@"Employees").HasColumnType("int").IsRequired();
-
-            // Foreign keys
-            builder.HasOne(a => a.Project).WithMany(b => b.Companies).HasForeignKey(c => c.IdProject).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_Company_Project");
-        }
-    }
-
     // House
     public class HouseConfiguration : IEntityTypeConfiguration<House>
     {
@@ -1236,7 +1240,7 @@ namespace ID3DWebLib
             builder.HasKey(x => x.Id).HasName("PK_House").IsClustered();
 
             builder.Property(x => x.Id).HasColumnName(@"Id").HasColumnType("int").IsRequired().ValueGeneratedOnAdd().UseIdentityColumn();
-            builder.Property(x => x.IdAddress).HasColumnName(@"IdAddress").HasColumnType("uniqueidentifier").IsRequired();
+            builder.Property(x => x.IdLocation).HasColumnName(@"IdLocation").HasColumnType("uniqueidentifier").IsRequired();
             builder.Property(x => x.Name).HasColumnName(@"Name").HasColumnType("nvarchar(150)").IsRequired().HasMaxLength(150);
             builder.Property(x => x.Description).HasColumnName(@"Description").HasColumnType("nvarchar(150)").IsRequired(false).HasMaxLength(150);
             builder.Property(x => x.CreationDate).HasColumnName(@"CreationDate").HasColumnType("datetime").IsRequired();
@@ -1249,6 +1253,28 @@ namespace ID3DWebLib
             builder.Property(x => x.Extra).HasColumnName(@"Extra").HasColumnType("nvarchar(500)").IsRequired(false).HasMaxLength(500);
             builder.Property(x => x.Price).HasColumnName(@"Price").HasColumnType("decimal(18,18)").HasPrecision(18,18).IsRequired();
             builder.Property(x => x.Type).HasColumnName(@"Type").HasColumnType("nvarchar(50)").IsRequired().HasMaxLength(50);
+
+            // Foreign keys
+            builder.HasOne(a => a.Location).WithMany(b => b.Houses).HasForeignKey(c => c.IdLocation).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_House_Address");
+        }
+    }
+
+    // Location
+    public class LocationConfiguration : IEntityTypeConfiguration<Location>
+    {
+        public void Configure(EntityTypeBuilder<Location> builder)
+        {
+            builder.ToTable("Location", "dbo");
+            builder.HasKey(x => x.Id).HasName("PK_Address").IsClustered();
+
+            builder.Property(x => x.Id).HasColumnName(@"Id").HasColumnType("uniqueidentifier").IsRequired().ValueGeneratedNever();
+            builder.Property(x => x.Street).HasColumnName(@"Street").HasColumnType("nvarchar(150)").IsRequired().HasMaxLength(150);
+            builder.Property(x => x.Number).HasColumnName(@"Number").HasColumnType("nvarchar(50)").IsRequired().HasMaxLength(50);
+            builder.Property(x => x.Zipcode).HasColumnName(@"Zipcode").HasColumnType("nchar(10)").IsRequired().IsFixedLength().HasMaxLength(10);
+            builder.Property(x => x.City).HasColumnName(@"City").HasColumnType("nvarchar(150)").IsRequired().HasMaxLength(150);
+            builder.Property(x => x.Country).HasColumnName(@"Country").HasColumnType("nvarchar(150)").IsRequired().HasMaxLength(150);
+            builder.Property(x => x.CreationDate).HasColumnName(@"CreationDate").HasColumnType("datetime").IsRequired();
+            builder.Property(x => x.Enabled).HasColumnName(@"Enabled").HasColumnType("bit").IsRequired();
         }
     }
 
@@ -1338,11 +1364,14 @@ namespace ID3DWebLib
             builder.HasKey(x => x.Id).HasName("PK_Project").IsClustered();
 
             builder.Property(x => x.Id).HasColumnName(@"Id").HasColumnType("int").IsRequired().ValueGeneratedOnAdd().UseIdentityColumn();
-            builder.Property(x => x.IdAddress).HasColumnName(@"IdAddress").HasColumnType("uniqueidentifier").IsRequired();
+            builder.Property(x => x.IdLocation).HasColumnName(@"IdLocation").HasColumnType("uniqueidentifier").IsRequired();
             builder.Property(x => x.Name).HasColumnName(@"Name").HasColumnType("nvarchar(150)").IsRequired().HasMaxLength(150);
             builder.Property(x => x.Description).HasColumnName(@"Description").HasColumnType("nvarchar(150)").IsRequired().HasMaxLength(150);
             builder.Property(x => x.CreationDate).HasColumnName(@"CreationDate").HasColumnType("datetime").IsRequired();
             builder.Property(x => x.Enabled).HasColumnName(@"Enabled").HasColumnType("bit").IsRequired();
+
+            // Foreign keys
+            builder.HasOne(a => a.Location).WithMany(b => b.Projects).HasForeignKey(c => c.IdLocation).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_Project_Address");
         }
     }
 
@@ -1355,11 +1384,14 @@ namespace ID3DWebLib
             builder.HasKey(x => x.Id).HasName("PK_School").IsClustered();
 
             builder.Property(x => x.Id).HasColumnName(@"Id").HasColumnType("int").IsRequired().ValueGeneratedOnAdd().UseIdentityColumn();
-            builder.Property(x => x.IdAddress).HasColumnName(@"IdAddress").HasColumnType("uniqueidentifier").IsRequired();
+            builder.Property(x => x.IdLocation).HasColumnName(@"IdLocation").HasColumnType("uniqueidentifier").IsRequired();
             builder.Property(x => x.Name).HasColumnName(@"Name").HasColumnType("nvarchar(150)").IsRequired().HasMaxLength(150);
             builder.Property(x => x.Description).HasColumnName(@"Description").HasColumnType("nvarchar(150)").IsRequired(false).HasMaxLength(150);
             builder.Property(x => x.CreationDate).HasColumnName(@"CreationDate").HasColumnType("datetime").IsRequired();
             builder.Property(x => x.Enabled).HasColumnName(@"Enabled").HasColumnType("bit").IsRequired();
+
+            // Foreign keys
+            builder.HasOne(a => a.Location).WithMany(b => b.Schools).HasForeignKey(c => c.IdLocation).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_School_Address");
         }
     }
 
